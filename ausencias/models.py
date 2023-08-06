@@ -15,3 +15,14 @@ class Permiso(models.Model):
     hora_llegada = models.TimeField()
     hora_salida = models.TimeField()
     militar = models.ForeignKey(Militar, on_delete = models.CASCADE)
+    def __str__(self):
+        return self.militar.nombre
+    
+class Licencias(models.Model):
+    fecha = models.DateField()
+    inicio = models.DateField(auto_now=False, auto_now_add=False)
+    termino = models.DateField(auto_now=False, auto_now_add=False)
+    militar = models.ForeignKey(Militar, on_delete = models.CASCADE)
+    
+    def __str__(self):
+        return self.militar.nombre
