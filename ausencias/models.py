@@ -15,6 +15,7 @@ class Permiso(models.Model):
     hora_llegada = models.TimeField()
     hora_salida = models.TimeField()
     militar = models.ForeignKey(Militar, on_delete = models.CASCADE)
+    
     def __str__(self):
         return self.militar.nombre
     
