@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+                <form action="" method="post" class="card">
+                    <p class="card-header display-6 text-center">Registrar Licencia</p>
+                    <div class="card-body">
+                        <p class="text-danger">{{error}}</p>
+                        {% csrf_token %}
+                        {{form}}
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="submit" class="btn btn-outline-dark">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

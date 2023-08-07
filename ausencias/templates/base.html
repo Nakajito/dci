@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+          
+            <a class="navbar-brand" href="#">DCI</a>
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/home">Inicio</a>
+                    <a class="nav-link" href="/agregar_militar">Agregar Militar</a>
+                    <a class="nav-link" href="/agregar_permiso">Agregar Permiso</a>
+                    <a class="nav-link" href="/agregar_licencia">Agregar Licencia</a>
+                </div>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/cerrar_sesion">Cerrar Sesión</a>
+                </div>
+          </div>
+        </div>
+    </nav>
+
+
+    {% block content %}
+
+    
+    {% endblock content %}
+
+    <footer class="container-fluid bg-black fixed-bottom">
+        <div class="">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <p class="text-light">col-1</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="text-light">col-2</p>
+                </div>
+                <div class="col md-4">
+                    <p class="text-light">col-3</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

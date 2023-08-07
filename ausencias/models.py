@@ -21,6 +21,7 @@ class Permiso(models.Model):
     
 class Licencias(models.Model):
     fecha = models.DateField()
+    motivo = models.TextField(null=True)
     inicio = models.DateField(auto_now=False, auto_now_add=False)
     termino = models.DateField(auto_now=False, auto_now_add=False)
     militar = models.ForeignKey(Militar, on_delete = models.CASCADE)

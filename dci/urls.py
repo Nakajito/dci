@@ -24,7 +24,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index, name = 'index')
+    path("", views.index, name = 'index'),
+    path("cerrar_sesion/", views.cerrar_sesion, name = 'cerrar_sesion'),
+    path("home/", views.home, name = 'home'),
+    path("agregar_militar/", views.agregar_militar, name = 'agregar_militar'),
+    path("agregar_permiso/", views.agregar_permiso, name = 'agregar_permiso'),
+    path("agregar_licencia/", views.agregar_licencia, name = 'agregar_licencia'),
 ]
 
 if settings.DEBUG:

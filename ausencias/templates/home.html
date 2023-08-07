@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="display-1">Panel</h1>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Grado</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Permisos</th>
+            <th scope="col">Licencias</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+  
+          {% for militar in militares_con_cantidad_de_permisos %}
+            <tr>
+              <td scope="row">{{militar.grado}}</td>
+              <td scope="row">{{militar.nombre}}</td>
+              <td scope="row">{{militar.cantidad_permisos}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+{% endblock content %}
